@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    {% from "_formhelpers.html" import render_field %}
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Analizador de sentimientos</h1>
+        <p class="text-center">Escribe la reseña de una película ya sea buena o mala.</p>
+        <form method="post" action="/result">
+          <div class="mb-3">
+            {{ form.review(class_="form-control", placeholder="Escribe tu reseña aquí...") }}
+          </div>
+          <div class="text-center">
+            <input
+              class="btn btn-warning"
+              type="submit"
+              value="Analizar"
+              name="submit_btn"
+            />
+          </div>
+        </form>
+      </div>
+  </body>
+</html>

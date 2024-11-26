@@ -1,0 +1,1 @@
+## Aplicacion simple para el analisis de reseñas de peliculas
